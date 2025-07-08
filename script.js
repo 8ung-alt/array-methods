@@ -18,5 +18,19 @@ function filterRange(arr, a, b) {
     return arr.filter((element) => (a <= element && element <= b));
 }
 
-let arr = [1,23,8,5,2];
-console.log(filterRange(arr, 4, 9));
+// let arr = [1,23,8,5,2];
+// console.log(filterRange(arr, 4, 9));
+
+function filterRangeInPlace(arr, a, b) {
+    for (let i = 0; i < arr.length; i++) {
+        if (b < arr[i] || arr[i] < a) {
+            arr.splice(i, 1);
+            i--;
+        }
+    }
+}
+
+let arr = [5,5,2,1,-1,8, 9, 10];
+
+filterRangeInPlace(arr, 1, 8);
+console.table(arr);
