@@ -36,6 +36,18 @@ function filterRangeInPlace(arr, a, b) {
 // console.table(arr);
 
 // Sort in decreasing order
-let arr = [5, 2, 1, -10, 8];
-arr.sort((a,b) => b - a);
-alert(arr);
+// let arr = [5, 2, 1, -10, 8];
+// arr.sort((a,b) => b - a);
+// alert(arr);
+
+// Copy and sort array
+function copySorted(arr) {
+    return arr.slice().sort();
+}
+
+let arr = ["HTML", "JavaScript", "CSS"];
+
+let sorted = copySorted(arr);
+
+console.log( sorted ); // CSS, HTML, JavaScript
+console.log( arr ); // HTML, JavaScript, CSS (no changes)
