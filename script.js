@@ -10,6 +10,13 @@ function camelize(str) {
     return words.join("");
 }
 
-console.log(camelize("background-color"));
-console.log(camelize("list-style-image"));
-console.log(camelize("-webkit-transition"));
+// console.log(camelize("background-color"));
+// console.log(camelize("list-style-image"));
+// console.log(camelize("-webkit-transition"));
+
+function filterRange(arr, a, b) {
+    return arr.filter((element) => (a <= element && element <= b));
+}
+
+let arr = [1,23,8,5,2];
+console.log(filterRange(arr, 4, 9));
