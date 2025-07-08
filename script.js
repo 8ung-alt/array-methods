@@ -45,9 +45,24 @@ function copySorted(arr) {
     return arr.slice().sort();
 }
 
-let arr = ["HTML", "JavaScript", "CSS"];
+// let arr = ["HTML", "JavaScript", "CSS"];
 
-let sorted = copySorted(arr);
+// let sorted = copySorted(arr);
 
-console.log( sorted ); // CSS, HTML, JavaScript
-console.log( arr ); // HTML, JavaScript, CSS (no changes)
+// console.log( sorted ); // CSS, HTML, JavaScript
+// console.log( arr ); // HTML, JavaScript, CSS (no changes)
+
+function unique(arr) {
+  return arr.reduce((acc, curr) => {
+    if (!acc.includes(curr)) {
+      acc.push(curr);
+    }
+    return acc;
+  }, []);
+}
+
+let strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+
+console.log(unique(strings));
